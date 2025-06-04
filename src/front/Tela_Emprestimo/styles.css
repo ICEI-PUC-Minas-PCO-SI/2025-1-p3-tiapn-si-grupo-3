@@ -278,16 +278,15 @@ main > article > div#emprestimos > div#filtragem{
   justify-content: space-between;
 }
 
-main > article > div#emprestimos > div#filtragem > div.input-icons > input{
+main > article > div#emprestimos > div#filtragem > div.input-icons > input#inputNome{
 
-  padding-left: 70px;
+  text-indent:20px;
 
 }
 
 main > article > div#emprestimos > div#filtragem > div.input-icons > input::placeholder{
 
   color:black;
-  padding-left: 20px;
 
 }
 
@@ -397,6 +396,10 @@ main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#g
   color:white;
   font-weight: bold;
   margin-top: 20px;
+}
+
+main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo3 > button:hover{
+  background-color:#3B378C;
 }
 
 .icon_circle{

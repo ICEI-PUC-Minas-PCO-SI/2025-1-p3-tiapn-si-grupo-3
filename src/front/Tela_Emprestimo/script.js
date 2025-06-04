@@ -6,29 +6,20 @@ menuButton.addEventListener('click', () => {
 });
 
 let listaEmprestimos = document.getElementById("listaEmprestimos");
-let dadosFunc, dadosEmp;
+let listaOptions = document.getElementById("selectPeca");
+let listaOptions2 = document.getElementById("selectDepartamento");
+let db;
 
 window.onload = () =>{
   
-  fetch('http://localhost:3000/funcionario')
+  fetch('http://localhost:3000/emprestimofuncionario')
   .then(response => response.json())
   .then(dados => {
 
-    dadosFunc = dados;
-    console.log(dadosFunc)
-     imprimeEmprestimos();  
-  })
-
-  fetch('http://localhost:3000/emprestimo')
-  .then(response => response.json())
-  .then(dados => {
-
-    dadosEmp = dados;
-    console.log(dadosEmp)
+    db = dados;
+    console.log(db)
     imprimeEmprestimos();  
-  }) 
-  
-  
+  })
 }
 
 const pesquisar = () => {
@@ -73,15 +64,22 @@ const pesquisar = () => {
 
 function imprimeEmprestimos() {
     
-    let str = ''
-    let codigos = ["1287-01", "3242-73", "8923-21", "8392-32", "1282-21"]
-    
+    let str = '';
+    let str2 = '<option selected value="vazio">Código da Peça</option>';
+    let str3 = '<option selected value="vazio">Departamento</option>';
 
     for(let i = 0 ; i < 3 ; i++){
+
+      str2 += `<option value="${db[i].Codigo_Ferramenta}">${db[i].Codigo_Ferramenta}</option>`;
+
+      str3 += `<option value="${db[i].nome}">${db[i].nome}</option>`
         
-      let aux = dadosEmp[i].Data_Retirada.split("T");
+      let aux = db[i].Data_Retirada.split("T");
       let aux2 = aux[0].split("-");
-      let data = `${aux2[2]}-${aux2[1]}-${aux2[0]}`
+      let data = `${aux2[2]}/${aux2[1]}/${aux2[0]}`
+
+      let aux3 = db[i].Data_Devolucao.split("-");
+      let data2 = `${aux3[2]}/${aux3[1]}/${aux3[0]}`
 
       str += `<div class="emprestimo">
 
@@ -89,7 +87,7 @@ function imprimeEmprestimos() {
 
                 <div>
                   <p class="label">Nome</p>
-                  <p class="text nomes">${dadosFunc[i].Nome}</p>
+                  <p class="text nomes">${db[i].Nome}</p>
                 </div>
 
                 <div>
@@ -103,12 +101,12 @@ function imprimeEmprestimos() {
 
                 <div>
                   <p class="label">Departamento</p> 
-                  <p class="text departamentos">{departamentos[i]}</p>
+                  <p class="text departamentos">${db[i].nome}</p>
                 </div>
 
                 <div>
                   <p class="label">Ferramenta</p>
-                  <p class="text ferramentaCod">${codigos[i]}</p>
+                  <p class="text ferramentaCod">${db[i].Codigo_Ferramenta}</p>
                 </div>              
               </div>
 
@@ -118,7 +116,7 @@ function imprimeEmprestimos() {
                   
                   <p class="label">Data de Devolução <i class="material-icons icon_circle">brightness_1</i></p>
                   
-                  <p class="text">02/12/24</p>
+                  <p class="text">${data2}</p>
                 </div>
 
                 <button type="submit">Devolver</button>
@@ -128,4 +126,6 @@ function imprimeEmprestimos() {
     }
 
     listaEmprestimos.innerHTML = str;
+    listaOptions.innerHTML = str2;
+    listaOptions2.innerHTML = str3;
 }

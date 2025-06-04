@@ -22,7 +22,7 @@ function EmprestimoFuncionario(){
     router.get(`/EmprestimoFuncionario`, async (req, res) => {
 
     try {
-      const [rows] = await db.query(`SELECT Funcionario.Nome, Funcionario.Departamento_Codigo, Emprestimo.Data_Retirada, Emprestimo.Data_Devolucao FROM Funcionario inner join Emprestimo on Funcionario.Codigo = Emprestimo.Operario_Funcionario_Codigo`);
+      const [rows] = await db.query(`SELECT Funcionario.Nome, Departamento.nome, Emprestimo.Data_Retirada, Emprestimo.Data_Devolucao, Emprestimo_Ferramenta.Codigo_Ferramenta FROM Funcionario inner join Emprestimo on Funcionario.Codigo = Emprestimo.Operario_Funcionario_Codigo inner join Departamento on Funcionario.Codigo = Departamento.Codigo inner join Emprestimo_Ferramenta on Emprestimo.Codigo = Emprestimo_Ferramenta.Emprestimo_Codigo`);
       res.json(rows);
 
     } catch (err) {
