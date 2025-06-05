@@ -27,8 +27,8 @@
 
         <div class="navbar-left">
             <button class="menu-button">&#9776;</button>
-            <a href="Index.html">
-                <img src="assets/Logo-Manejo_Laranja.png" alt="Logo Manejo" class="logo-img" />
+            <a href="./../Tela-Home/Index.html">
+                <img src="./../assets/Logo-Manejo_Laranja.png" alt="Logo Manejo" class="logo-img" />
             </a>
 
         </div>
@@ -53,7 +53,7 @@
             <a href="#">
             <div class="user-info">
 
-                <img src="assets/Logo_Fernandes-Prado.png" alt="Logo Fernandes Prado" class="logo-empresa" />
+                <img src="./../assets/Logo_Fernandes-Prado.png" alt="Logo Fernandes Prado" class="logo-empresa" />
 
                 <div class="user-text">
                     <p class="user-name">Alessandra</p>
@@ -70,19 +70,19 @@
   <nav class="sidebar-nav">
     <ul>
       <li>
-        <a href="home.html">
+        <a href="./../Tela-Home/Index.html">
           <i class="fa fa-house"></i>
           <span>Início</span>
         </a>
       </li>
       <li>
-        <a href="emprestimos.html">
+        <a href="./../Tela_Emprestimo/index.html">
           <i class="fa fa-cart-shopping"></i>
           <span>Empréstimos</span>
         </a>
       </li>
       <li>
-        <a href="../tela-funcionario/funcionarios.html">
+        <a href="./../tela-funcionario/funcionarios.html">
           <i class="fa fa-user"></i>
           <span>Funcionários</span>
         </a>
@@ -94,7 +94,7 @@
         </a>
       </li>
       <li class="active">
-        <a href="estoque.html">
+        <a href="./../Tela-Estoque/estoque.html">
           <i class="fa fa-wrench"></i>
           <span>Estoque</span>
         </a>
@@ -145,29 +145,29 @@
           <tr>
             <th>Código</th>
             <th>Nome</th>
+            <th>Tipo</th>
             <th>Quantidade</th>
-            <th>Categoria</th>
             <th>Localização</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody id="tbEstoque">
           <tr>
-            <td>001</td>
-            <td>Maquita</td>
-            <td>20</td>
-            <td>Elétrica</td>
-            <td>AA07CD</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>
               <a href="#" class="btn-editar" data-id="${codigo}"><i class="fa fa-pen-to-square text-warning"></i></a>
             </td>
           </tr>
           <tr>
-            <td>002</td>
-            <td>Furadeira</td>
-            <td>05</td>
-            <td>Elétrica</td>
-            <td>AA05BE</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td>
               <a href="#"><i class="fa fa-pen-to-square text-warning"></i></a>
             </td>
@@ -177,7 +177,7 @@
     </div>
   </div>
 
-<div id="formModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+<div id="formModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden items-center justify-center z-50">
     <div class="bg-white rounded-lg p-6 w-full max-w-lg relative">
       
       <button id="fecharModal" class="absolute top-2 right-3 text-2xl font-bold text-gray-500 hover:text-red-500">&times;</button>
@@ -191,12 +191,12 @@
           <input type="text" id="nome" name="nome" class="border p-2 w-full rounded-md">
         </div>
         <div>
-          <label for="quantidade" class="block text-sm font-medium">Quantidade:</label>
-          <input type="number" id="quantidade" name="quantidade" class="border p-2 w-full rounded-md">
+          <label for="tipo" class="block text-sm font-medium">Tipo:</label>
+          <input type="text" id="tipo" name="tipo" class="border p-2 w-full rounded-md">
         </div>
         <div>
-          <label for="categoria" class="block text-sm font-medium">Categoria:</label>
-          <input type="text" id="categoria" name="categoria" class="border p-2 w-full rounded-md">
+          <label for="quantidade" class="block text-sm font-medium">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" class="border p-2 w-full rounded-md">
         </div>
         <div>
           <label for="localizacao" class="block text-sm font-medium">Localização:</label>

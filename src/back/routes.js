@@ -73,5 +73,88 @@ const tabelas = [
 // Cria as rotas automaticamente
 tabelas.forEach(criarRotaParaTabela);
 EmprestimoFuncionario();
+<<<<<<< HEAD
 deletaEmprestimo();
+=======
+
+router.post('/Ferramenta', async (req, res) => {
+  // Extrai os dados do corpo da requisição
+  const { nome, tipo, quantidade, localizacao } = req.body;
+
+  // Validação simples
+  if (!nome || !tipo || !quantidade || !localizacao) {
+    return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
+  }
+
+  try {
+    const query = 'INSERT INTO Ferramenta (Nome, Tipo, Quantidade, Localizacao) VALUES (?, ?, ?, ?)';
+    // No seu schema do DB, o nome da coluna é 'Localização'? Se for, ajuste abaixo.
+    // Estou assumindo que seja 'Localizacao' sem o 'ç' e 'ã' para compatibilidade.
+    const [result] = await db.query(query, [nome, tipo, quantidade, localizacao]);
+    
+    // Retorna o novo item criado com seu ID
+    res.status(201).json({ 
+        id: result.insertId, 
+        nome, 
+        tipo, 
+        quantidade, 
+        localizacao 
+    });
+
+  } catch (err) {
+    console.error("Erro ao inserir ferramenta:", err);
+    res.status(500).json({ error: 'Erro ao cadastrar a ferramenta.' });
+  }
+});
+
+
+// ROTA PARA ATUALIZAR (PUT) UMA FERRAMENTA EXISTENTE
+router.put('/Ferramenta/:id', async (req, res) => {
+  const { id } = req.params; // Pega o ID da URL
+  const { nome, tipo, quantidade, localizacao } = req.body;
+
+  // Validação
+  if (!nome || !tipo || !quantidade || !localizacao) {
+    return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
+  }
+
+  try {
+    const query = 'UPDATE Ferramenta SET Nome = ?, Tipo = ?, Quantidade = ?, Localizacao = ? WHERE Codigo = ?';
+    const [result] = await db.query(query, [nome, tipo, quantidade, localizacao, id]);
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: 'Ferramenta não encontrada.' });
+    }
+    
+    res.json({ message: 'Ferramenta atualizada com sucesso.' });
+
+  } catch (err) {
+    console.error("Erro ao atualizar ferramenta:", err);
+    res.status(500).json({ error: 'Erro ao atualizar a ferramenta.' });
+  }
+});
+
+
+// (Opcional) ROTA PARA DELETAR (DELETE) UMA FERRAMENTA
+router.delete('/Ferramenta/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const query = 'DELETE FROM Ferramenta WHERE Codigo = ?';
+    const [result] = await db.query(query, [id]);
+
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: 'Ferramenta não encontrada.' });
+    }
+
+    res.status(200).json({ message: 'Ferramenta deletada com sucesso.' });
+
+  } catch (err) {
+    console.error("Erro ao deletar ferramenta:", err);
+    res.status(500).json({ error: 'Erro ao deletar a ferramenta.' });
+  }
+});
+
+
+>>>>>>> main
 module.exports = router;

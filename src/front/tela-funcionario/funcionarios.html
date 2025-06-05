@@ -26,7 +26,7 @@
         <div class="navbar-left">
             <button class="menu-button">&#9776;</button>
             <a href="Index.html">
-                <img src="assets/Logo-Manejo_Laranja.png" alt="Logo Manejo" class="logo-img" />
+                <img src="../assets/Logo-Manejo_Laranja.png" alt="Logo Manejo" class="logo-img" />
             </a>
 
         </div>
@@ -51,7 +51,7 @@
             <a href="#">
                 <div class="user-info">
 
-                    <img src="assets/Logo_Fernandes-Prado.png" alt="Logo Fernandes Prado" class="logo-empresa" />
+                    <img src="../assets/Logo_Fernandes-Prado.png" alt="Logo Fernandes Prado" class="logo-empresa" />
 
                     <div class="user-text">
                         <p class="user-name">Alessandra</p>
@@ -68,49 +68,49 @@
         <aside class="sidebar">
             <nav class="sidebar-nav">
                 <ul>
-                    <li>
-                        <a href="../Tela-Home/Index.html">
-                            <i class="fa fa-house"></i>
-                            <span>Início</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../Tela_Emprestimo/index.html">
-                            <i class="fa fa-cart-shopping"></i>
-                            <span>Empréstimos</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="">
-                            <i class="fa fa-user"></i>
-                            <span>Funcionários</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../Tela-Agenda/index.html">
-                            <i class="fa fa-calendar"></i>
-                            <span>Agenda</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../Tela-Estoque/estoque.html">
-                            <i class="fa fa-wrench"></i>
-                            <span>Estoque</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../Tela-Configuracao/configuracoes.html">
-                            <i class="fa fa-gear"></i>
-                            <span>Configuração</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../Tela-Departamento/departamentos.html">
-                            <i class="fa fa-folder"></i>
-                            <span>Departamento</span>
-                        </a>
-                    </li>
-                </ul>
+      <li>
+        <a href="./../Tela-Home/Index.html">
+          <i class="fa fa-house"></i>
+          <span>Início</span>
+        </a>
+      </li>
+      <li>
+        <a href="./../Tela_Emprestimo/index.html">
+          <i class="fa fa-cart-shopping"></i>
+          <span>Empréstimos</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="./../tela-funcionario/funcionarios.html">
+          <i class="fa fa-user"></i>
+          <span>Funcionários</span>
+        </a>
+      </li>
+      <li>
+        <a href="agenda.html">
+          <i class="fa fa-calendar"></i>
+          <span>Agenda</span>
+        </a>
+      </li>
+      <li>
+        <a href="./../Tela-Estoque/estoque.html">
+          <i class="fa fa-wrench"></i>
+          <span>Estoque</span>
+        </a>
+      </li>
+      <li>
+        <a href="configuracoes.html">
+          <i class="fa fa-gear"></i>
+          <span>Configuração</span>
+        </a>
+      </li>
+      <li>
+        <a href="departamentos.html">
+          <i class="fa fa-folder"></i>
+          <span>Departamento</span>
+        </a>
+      </li>
+    </ul>
             </nav>
 
         </aside>
@@ -145,11 +145,8 @@
                 <input type="text" name="" id="telefone-funci-popup">
                 <label for="cod-funci-popup">Celular:</label>
                 <input type="text" name="" id="cell-funci-popup">
-                <label for="Depart-funci-popup">Departamentos:</label>
-                <select name="Depart-funci-popup" id="Depart-funci-popup">
-                    <option value="RH">RH</option>
-                    <option value="RH">Logistica</option>
-                </select>
+                <label for="Depart-funci-popup">ID do Departamento:</label>
+                <input type="number" name="" id="Depart-funci-popup">
                 <button id="Salvar-Funcionario">Salvar</button>
             </div>
         </div>
@@ -176,10 +173,7 @@
       <input type="text" id="cell-funci-popup-editar">
 
       <label for="Depart-funci-popup-editar">Departamentos:</label>
-      <select id="Depart-funci-popup-editar">
-        <option value="RH">RH</option>
-        <option value="Logistica">Logistica</option>
-      </select>
+      <input type="number" name="" id="Depart-funci-popup-editar">
 
       <button id="Salvar-Funcionario-Editar">Salvar</button>
       <button id="Excluir-Funcionario" >Excluir</button>

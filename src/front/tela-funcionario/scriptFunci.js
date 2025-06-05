@@ -25,6 +25,7 @@ const CodigoFuncionario = document.getElementById("cod-funci-popup");
 const CpfFuncionario = document.getElementById("cpf-funci-popup");
 const TelefoneFuncionario = document.getElementById("telefone-funci-popup");
 const CelularFuncionario = document.getElementById("cell-funci-popup");
+const DepartamentoFuncionario = document.getElementById("depart-funci-popup");
 const salvarFunc = document.getElementById("Salvar-Funcionario");
 
 // ------------ Sessão Máscara de Input ------------
@@ -106,7 +107,7 @@ function abrirEditarFuncionario(id) {
       document.getElementById("cpf-funci-popup-editar").value = f.cpf;
       document.getElementById("telefone-funci-popup-editar").value = f.telefone;
       document.getElementById("cell-funci-popup-editar").value = f.celular;
-      document.getElementById("Depart-funci-popup-editar").value = f.departamento || "";
+      document.getElementById("Depart-funci-popup-editar").value = f.departamento;
 
       document.getElementById("Popup-EditarFuncionario").style.display = "block";
     })
@@ -165,6 +166,7 @@ salvarFunc.addEventListener('click', function (event) {
     cpf,
     telefone,
     celular,
+    departamento: DepartamentoFuncionario.value.trim()
   };
 
   fetch(`http://localhost:3000/funcionario`, {
@@ -245,4 +247,15 @@ document.getElementById("Excluir-Funcionario").addEventListener("click", functio
       location.reload();
     })
     .catch(err => console.error("Erro ao excluir funcionário:", err));
+});
+
+
+document.getElementById("search-funcionario").addEventListener("input", function () {
+  const termo = this.value.toLowerCase();
+  const funcionarios = document.querySelectorAll(".funcionario");
+
+  funcionarios.forEach(funcionario => {
+    const nome = funcionario.querySelector(".nome-funci p").textContent.toLowerCase();
+    funcionario.style.display = nome.includes(termo) ? "flex" : "none";
+  });
 });
