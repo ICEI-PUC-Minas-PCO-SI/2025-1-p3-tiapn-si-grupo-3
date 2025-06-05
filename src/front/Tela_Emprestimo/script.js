@@ -74,14 +74,13 @@ function imprimeEmprestimos() {
 
       str3 += `<option value="${db[i].nome}">${db[i].nome}</option>`
         
-      let aux = db[i].Data_Retirada.split("T");
-      let aux2 = aux[0].split("-");
+      let aux = db[i].Data_Retirada.split("-");
       let data = `${aux2[2]}/${aux2[1]}/${aux2[0]}`
 
       let aux3 = db[i].Data_Devolucao.split("-");
       let data2 = `${aux3[2]}/${aux3[1]}/${aux3[0]}`
 
-      str += `<div class="emprestimo" id="${db[i].Codigo}">
+      str += `<div class="emprestimo container3" id="${db[i].Codigo}">
 
               <div id="grupo1">
 

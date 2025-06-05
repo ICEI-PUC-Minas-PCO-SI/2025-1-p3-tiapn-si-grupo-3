@@ -40,7 +40,6 @@ function deletaEmprestimo (){
     let aux  = req.params.id.split(":");
 
     let id = aux[1]
-    console.log("ssss" + id)
 
     try {
 
@@ -52,6 +51,33 @@ function deletaEmprestimo (){
       res.status(500).json({ error: `Erro ao buscar dados da tabela ` });
     }
   })
+}
+
+function insereEmprestimo(){
+  
+  router.post('/Emprestimo', async (req, res) => {
+  
+    console.log(req.body)
+    
+    let nome = req.body.nome;
+    let codigo_func = req.body.codigo_func;
+    let codigo_ferr = req.body.codigo_ferr;
+    let quantidade = req.body.quantidade;
+    let data_dev = req.body.data_dev;
+    let data_ret = req.body.data_ret;
+    let desc = req.body.desc;
+    let codigo_emp = req.body.codigo_emp;
+
+    try {
+    
+      const [result] = await db.query(`INSERT INTO Emprestimo (Codigo, Descricao, Data_Retirada, Data_Devolucao, Operario_Funcionario_Codigo) VALUES (?,?,?,?,?)`,[codigo_emp,desc,data_ret,data_dev,codigo_func]);
+    
+
+    } catch (err) {
+      console.error("Erro ao inserir ferramenta:", err);
+      res.status(500).json({ error: 'Erro ao cadastrar a ferramenta.' });
+    }
+  });
 }
 
 // Lista de tabelas
@@ -72,9 +98,10 @@ const tabelas = [
 
 // Cria as rotas automaticamente
 tabelas.forEach(criarRotaParaTabela);
-EmprestimoFuncionario();
 
+EmprestimoFuncionario();
 deletaEmprestimo();
+insereEmprestimo()
 
 router.post('/Ferramenta', async (req, res) => {
   // Extrai os dados do corpo da requisição

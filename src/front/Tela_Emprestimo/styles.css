@@ -260,7 +260,7 @@ main > article{
 
 }
 
-main > article > div#emprestimos{
+main > article > div.container{
 
   background-color: lightgrey;
   margin:0;
@@ -271,26 +271,26 @@ main > article > div#emprestimos{
  
 }
 
-main > article > div#emprestimos > div#filtragem{
+main > article > div.container > div#filtragem{
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-main > article > div#emprestimos > div#filtragem > div.input-icons > input#inputNome{
+main > article > div.container > div#filtragem > div.input-icons > input#inputNome{
 
   text-indent:20px;
 
 }
 
-main > article > div#emprestimos > div#filtragem > div.input-icons > input::placeholder{
+main > article > div.container > div#filtragem > div.input-icons > input::placeholder{
 
   color:black;
 
 }
 
-main > article > div#emprestimos > div#filtragem > div.input-icons > i{
+main > article > div.container > div#filtragem > div.input-icons > i{
 
   position: absolute;
   padding: 10px;
@@ -298,7 +298,7 @@ main > article > div#emprestimos > div#filtragem > div.input-icons > i{
   text-align: center;
 
 }
-main > article > div#emprestimos > div#filtragem > div.input-icons > input, main > article > div#emprestimos > div#filtragem > select{
+main > article > div.container > div#filtragem > div.input-icons > input, main > article > div.container > div#filtragem > select{
 
   border-radius: 15px;
   border: none;
@@ -313,12 +313,12 @@ main > article > div#emprestimos > div#filtragem > div.input-icons > input, main
   
 }
 
-main > article > div#emprestimos > div#filtragem > select,::picker(select) {
+main > article > div.container > div#filtragem > select,::picker(select) {
   
   appearance: base-select;
 }
 
-main > article > div#emprestimos > div#filtragem > select::picker-icon{
+main > article > div.container > div#filtragem > select::picker-icon{
 
   padding-right: 10px;
   color: #3B378C;
@@ -332,7 +332,7 @@ main > article > .divider {
   margin: 10px 0;
 }
 
-main > article > div#emprestimos > .divider{
+main > article > div.container > .divider{
 
   width: 100%;
   height: 2px;
@@ -340,14 +340,14 @@ main > article > div#emprestimos > .divider{
   margin: 10px 0px;
 }
 
-main > article > div#emprestimos > div#listaEmprestimos{
+main > article > div.container > div.container2{
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo{
+main > article > div.container > div.container2 > div.container3{
 
   background-color: white;
   padding: 10px 40px 20px 20px;
@@ -360,25 +360,25 @@ main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo{
 
 }
 
-main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo1, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo2, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo3{
+main > article > div.container > div.container2 > div.container3 > div#grupo1, main > article > div.container > div.container2 > div.container3 > div#grupo2, main > article > div.container > div.container2 > div.container3 > div#grupo3{
 
   padding-top: 5px;
 
 }
 
-main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo1 > div, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo2 > div, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo3 > div{
+main > article > div.container > div.container2 > div.container3 > div#grupo1 > div, main > article > div.container > div.container2 > div.container3 > div#grupo2 > div, main > article > div.container > div.container2 > div.container3 > div#grupo3 > div{
 
   margin-bottom: 20px;
 }
 
-main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo1 > div > p.label, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo2 > div > p.label, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo3 > div > p.label{
+main > article > div.container > div.container2 > div.container3 > div#grupo1 > div > p.label, main > article > div.container > div.container2 > div.container3 > div#grupo2 > div > p.label, main > article > div.container > div.container2 > div.container3 > div#grupo3 > div > p.label{
 
   margin:0;
   padding:0;
   font-weight: bold;
 }
 
-main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo1 > div > p.text, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo2 > div > p.text, main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo3 > div > p.text{
+main > article > div.container > div.container2 > div.container3 > div#grupo1 > div > p.text, main > article > div.container > div.container2 > div.container3 > div#grupo2 > div > p.text, main > article > div.container > div.container2 > div.container3 > div#grupo3 > div > p.text{
 
   font-size: 1.3em;
   padding:0;
@@ -386,7 +386,7 @@ main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#g
   padding-top: 3px;
 }
 
-main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo3 > button{
+main > article > div.container > div.container2 > div.container3 > div#grupo3 > button{
 
   border:none;
   outline: none;
@@ -398,7 +398,7 @@ main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#g
   margin-top: 20px;
 }
 
-main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#grupo3 > button:hover{
+main > article > div.container > div.container2 > div.container3 > div#grupo3 > button:hover{
   background-color:#3B378C;
 }
 
@@ -408,4 +408,184 @@ main > article > div#emprestimos > div#listaEmprestimos > div.emprestimo > div#g
   color: greenyellow;
   min-width: 50px;
   text-align: center;
+}
+
+main > article > div.container > div.container2 > div.container4{
+
+  background-color: white;
+  padding: 10px 40px 20px 20px;
+  border-radius: 10px;
+  box-shadow: inset 2.7px 2.7px 3px -0.5px rgb(162, 162, 162);
+  width:40vw;
+  display:flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-right: 20px;
+
+}
+
+main > article > div.container > div.container2 > div.container4 > div#grupo1 > p, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > p, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub2 > p{
+
+  font-weight: bolder;
+}
+
+main > article > div.container > div.container2 > div.container4 > div#grupo1 > input, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > input, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub2 > div.input-icons > input, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > input#inputDescricao{
+
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 11px;
+  padding: 6px;
+  width: 35vw;
+  box-shadow: inset 2.7px 2.7px 3px 1px rgb(162, 162, 162);
+  color:black;
+  outline: none;
+
+  text-indent: 20px;
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2{
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2  #grupo2-sub1{
+
+  margin-right: 80px;
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > div.corrigeEspc{
+
+  margin-right: 0px;
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub2 > div.input-icons > i{
+
+  position: absolute;
+  padding: 6px 10px 10px 10px;
+  min-width: 50px;
+  text-align: center;
+  color:#FDBE00;
+
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > select, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub2 > select{
+
+  border: none;
+  border-radius: 11px;
+  padding: 6px;
+ 
+  outline: none;
+  background-color: #D9D9D9;
+  color:black;
+  font-weight: 200;
+  width: 200px;
+  box-shadow: inset 2.7px 2.7px 3px 1px rgb(162, 162, 162);
+
+
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub2 > select,::picker(select), main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > select {
+  
+  appearance: base-select;
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > select::picker-icon, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub2 > select::picker-icon{
+
+  padding-right: 10px;
+  color: #3B378C;
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > input, main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub2 > div.input-icons > input{
+
+  width: 15vw;
+
+}
+
+main > article > div.container > div.container2 > div.container5{
+
+  background-color: white;
+  padding: 10px 40px 20px 20px;
+  border-radius: 10px;
+  box-shadow: inset 2.7px 2.7px 3px -0.5px rgb(162, 162, 162);
+  width:20vw;
+  display:flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  margin-bottom: 20px;
+  justify-content:center;
+
+
+}
+
+main > article > div.container > div.container2 > div.container5 > h1{
+
+  font-size: 1.7em;
+}
+
+main > article > div.container > div.container2 > div.container5 > p{
+
+  font-size: 1.1em;
+  line-height: 33px;
+}
+
+main > article > div.container > div.container2 > div.container5 > div.button-icons > button{
+
+  background-color: red;
+  color:white;
+  font-weight: bolder;
+  padding: 10px;
+  padding-left: 55px;
+  border-radius: 15px;
+  font-size: 1.1em;
+  text-align: left;
+  border: none;
+
+  box-shadow:  3px 3px 3px 1px rgba(179, 179, 179, 0.847);
+}
+
+main > article > div.container > div.container2 > div.container5 > div.button-icons > button:hover{
+
+  background-color: #3B378C;
+}
+
+main > article > div.container > div.container2 > div.container5 > div.button-icons > i{
+
+  position: absolute;
+  padding: 10px;
+  min-width: 50px;
+  text-align: center;
+  color:white;
+  font-weight: bolder;
+
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > button{
+
+  background-color: #FDBE00;
+  color:white;
+  border: none;
+  border-radius: 12px;
+  padding:0px 40px;
+  font-weight: bolder;
+  font-size: 1.2em;
+  display: inline;
+  box-shadow:  3px 3px 3px 1px rgba(179, 179, 179, 0.847);
+  height: 7vh;
+  margin-top: 32px;
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 >  button:hover{
+
+  background-color: #3B378C;
+}
+
+main > article > div.container > div.container2 > div.container4 > div.grupo2 > div#grupo2-sub1 > input#inputDescricao{
+
+  width:20vw;
+  margin-right: 20px;
+
 }

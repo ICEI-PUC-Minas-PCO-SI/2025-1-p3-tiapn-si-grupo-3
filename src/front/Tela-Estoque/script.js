@@ -8,9 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const botaoFecharModal = document.getElementById("fecharModal");
     const menuButton = document.querySelector('.menu-button');
     const sidebar = document.querySelector('.sidebar');
-
-    
-
     
     async function carregarFerramentas() {
         try {
