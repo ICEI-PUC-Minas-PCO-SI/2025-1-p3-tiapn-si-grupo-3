@@ -17,9 +17,9 @@ function criarRotaParaTabela(nomeTabela) {
   });
 }
 
-function EmprestimoFuncionario(){
+function EmprestimoFuncionario() {
 
-    router.get(`/EmprestimoFuncionario`, async (req, res) => {
+  router.get(`/EmprestimoFuncionario`, async (req, res) => {
 
     try {
 
@@ -33,11 +33,11 @@ function EmprestimoFuncionario(){
   });
 }
 
-function deletaEmprestimo (){
+function deletaEmprestimo() {
 
-  router.delete(`/emprestimo/delete/:id`, async (req, res) =>{
+  router.delete(`/emprestimo/delete/:id`, async (req, res) => {
 
-    let aux  = req.params.id.split(":");
+    let aux = req.params.id.split(":");
 
     let id = aux[1]
     console.log("ssss" + id)
@@ -90,14 +90,14 @@ router.post('/Ferramenta', async (req, res) => {
     // No seu schema do DB, o nome da coluna é 'Localização'? Se for, ajuste abaixo.
     // Estou assumindo que seja 'Localizacao' sem o 'ç' e 'ã' para compatibilidade.
     const [result] = await db.query(query, [nome, tipo, quantidade, localizacao]);
-    
+
     // Retorna o novo item criado com seu ID
-    res.status(201).json({ 
-        id: result.insertId, 
-        nome, 
-        tipo, 
-        quantidade, 
-        localizacao 
+    res.status(201).json({
+      id: result.insertId,
+      nome,
+      tipo,
+      quantidade,
+      localizacao
     });
 
   } catch (err) {
@@ -124,7 +124,7 @@ router.put('/Ferramenta/:id', async (req, res) => {
     if (result.affectedRows === 0) {
       return res.status(404).json({ error: 'Ferramenta não encontrada.' });
     }
-    
+
     res.json({ message: 'Ferramenta atualizada com sucesso.' });
 
   } catch (err) {
@@ -151,6 +151,65 @@ router.delete('/Ferramenta/:id', async (req, res) => {
   } catch (err) {
     console.error("Erro ao deletar ferramenta:", err);
     res.status(500).json({ error: 'Erro ao deletar a ferramenta.' });
+  }
+});
+
+
+// Rotas para Lembrete
+
+// GET /Lembrete
+router.get('/Lembrete', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT Codigo, Observacao FROM Lembrete ORDER BY Codigo DESC');
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao buscar lembretes' });
+  }
+});
+
+
+
+function Rotas() {
+  // POST /Lembrete
+  router.post('/Lembrete', async (req, res) => {
+    const { observacao, administrador_codigo } = req.body;
+
+    console.log(req.body);
+
+    if (!observacao || !administrador_codigo) {
+      return res.status(400).json({ error: 'Os campos observacao e administrador_codigo são obrigatórios.' });
+    }
+
+    try {
+      const [result] = await db.query(
+        `INSERT INTO Lembrete (${2},Observacao, Administrador_Funcionario_Codigo) VALUES (?, ?)`,
+        [observacao, administrador_codigo]
+      );
+      res.status(201).json({ Codigo: result.insertId, Observacao: observacao });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Erro ao inserir lembrete', detalhes: err.sqlMessage });
+    }
+
+  });
+}
+ 
+Rotas();
+
+// DELETE /Lembrete/:id
+router.delete('/Lembrete/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const [result] = await db.query('DELETE FROM Lembrete WHERE Codigo = ?', [id]);
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: 'Lembrete não encontrado.' });
+    }
+    res.status(200).json({ message: 'Lembrete deletado com sucesso.' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Erro ao deletar lembrete' });
   }
 });
 
