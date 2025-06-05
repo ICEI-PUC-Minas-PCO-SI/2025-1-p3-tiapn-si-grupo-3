@@ -22,7 +22,8 @@ function EmprestimoFuncionario(){
     router.get(`/EmprestimoFuncionario`, async (req, res) => {
 
     try {
-      const [rows] = await db.query(`SELECT Funcionario.Nome, Departamento.nome, Emprestimo.Data_Retirada, Emprestimo.Data_Devolucao, Emprestimo_Ferramenta.Codigo_Ferramenta FROM Funcionario inner join Emprestimo on Funcionario.Codigo = Emprestimo.Operario_Funcionario_Codigo inner join Departamento on Funcionario.Codigo = Departamento.Codigo inner join Emprestimo_Ferramenta on Emprestimo.Codigo = Emprestimo_Ferramenta.Emprestimo_Codigo`);
+
+      const [rows] = await db.query(`SELECT Funcionario.Nome, Departamento.nome, Emprestimo.Data_Retirada, Emprestimo.Data_Devolucao, Emprestimo_Ferramenta.Codigo_Ferramenta, Emprestimo.Codigo FROM Funcionario inner join Emprestimo on Funcionario.Codigo = Emprestimo.Operario_Funcionario_Codigo inner join Departamento on Funcionario.Departamento_Codigo = Departamento.Codigo inner join Emprestimo_Ferramenta on Emprestimo.Codigo = Emprestimo_Ferramenta.Emprestimo_Codigo`);
       res.json(rows);
 
     } catch (err) {
@@ -30,7 +31,27 @@ function EmprestimoFuncionario(){
       res.status(500).json({ error: `Erro ao buscar dados da tabela ` });
     }
   });
+}
 
+function deletaEmprestimo (){
+
+  router.delete(`/emprestimo/delete/:id`, async (req, res) =>{
+
+    let aux  = req.params.id.split(":");
+
+    let id = aux[1]
+    console.log("ssss" + id)
+
+    try {
+
+      const [rows] = await db.query(`DELETE FROM Emprestimo WHERE codigo = ${id}`);
+      res.json(rows);
+
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: `Erro ao buscar dados da tabela ` });
+    }
+  })
 }
 
 // Lista de tabelas
@@ -52,5 +73,5 @@ const tabelas = [
 // Cria as rotas automaticamente
 tabelas.forEach(criarRotaParaTabela);
 EmprestimoFuncionario();
-
+deletaEmprestimo();
 module.exports = router;

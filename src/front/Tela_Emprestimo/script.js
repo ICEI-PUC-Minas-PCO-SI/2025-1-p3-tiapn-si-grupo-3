@@ -68,7 +68,7 @@ function imprimeEmprestimos() {
     let str2 = '<option selected value="vazio">Código da Peça</option>';
     let str3 = '<option selected value="vazio">Departamento</option>';
 
-    for(let i = 0 ; i < 3 ; i++){
+    for(let i = 0 ; i < db.length ; i++){
 
       str2 += `<option value="${db[i].Codigo_Ferramenta}">${db[i].Codigo_Ferramenta}</option>`;
 
@@ -81,7 +81,7 @@ function imprimeEmprestimos() {
       let aux3 = db[i].Data_Devolucao.split("-");
       let data2 = `${aux3[2]}/${aux3[1]}/${aux3[0]}`
 
-      str += `<div class="emprestimo">
+      str += `<div class="emprestimo" id="${db[i].Codigo}">
 
               <div id="grupo1">
 
@@ -119,7 +119,7 @@ function imprimeEmprestimos() {
                   <p class="text">${data2}</p>
                 </div>
 
-                <button type="submit">Devolver</button>
+                <button type="submit" onClick="javarscipt:excluiEmprestimo(${db[i].Codigo});recarregarAPagina()">Devolver</button>
 
               </div>
             </div>`
@@ -128,4 +128,26 @@ function imprimeEmprestimos() {
     listaEmprestimos.innerHTML = str;
     listaOptions.innerHTML = str2;
     listaOptions2.innerHTML = str3;
+}
+
+function recarregarAPagina(){
+
+
+  window.location.reload();
+  console.log("eede")
+} 
+
+function excluiEmprestimo(id){
+
+  console.log(id);
+
+  let url = 'http://localhost:3000/emprestimo/delete/:' + id;
+
+  let options = {
+
+    method: "DELETE",
+  }
+
+  fetch(url, options)
+  .then(response => console.log(response.status))
 }
