@@ -33,6 +33,22 @@ function EmprestimoFuncionario(){
   });
 }
 
+function EmprestimoAtrasado(){
+
+    router.get(`/EmprestimoAtrasado`, async (req, res) => {
+
+    try {
+
+      const [rows] = await db.query(`SELECT Funcionario.Nome, Ferramenta.nome, Emprestimo_Ferramenta.Codigo_Ferramenta, Emprestimo.Data_Devolucao FROM Emprestimo inner join Funcionario on Emprestimo.Operario_Funcionario_Codigo = Funcionario.Codigo inner join Ferramenta inner join Emprestimo_Ferramenta on Emprestimo_Ferramenta.Codigo_Ferramenta = Ferramenta.Codigo`);
+      res.json(rows);
+
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: `Erro ao buscar dados da tabela ` });
+    }
+  });
+}
+
 function deletaEmprestimo (){
 
   router.delete(`/emprestimo/delete/:id`, async (req, res) =>{
@@ -59,7 +75,6 @@ function insereEmprestimo(){
   
     console.log(req.body)
     
-    let nome = req.body.nome;
     let codigo_func = req.body.codigo_func;
     let codigo_ferr = req.body.codigo_ferr;
     let quantidade = req.body.quantidade;
@@ -71,13 +86,15 @@ function insereEmprestimo(){
     try {
     
       const [result] = await db.query(`INSERT INTO Emprestimo (Codigo, Descricao, Data_Retirada, Data_Devolucao, Operario_Funcionario_Codigo) VALUES (?,?,?,?,?)`,[codigo_emp,desc,data_ret,data_dev,codigo_func]);
-    
+
+      const [result2] = await db.query(`INSERT INTO Emprestimo_Ferramenta (Codigo_Ferramenta, Emprestimo_Codigo) VALUES (?,?)`,[codigo_ferr,codigo_emp]);
 
     } catch (err) {
       console.error("Erro ao inserir ferramenta:", err);
       res.status(500).json({ error: 'Erro ao cadastrar a ferramenta.' });
     }
-  });
+
+  });  
 }
 
 // Lista de tabelas
@@ -102,6 +119,7 @@ tabelas.forEach(criarRotaParaTabela);
 EmprestimoFuncionario();
 deletaEmprestimo();
 insereEmprestimo()
+EmprestimoAtrasado()
 
 router.post('/Ferramenta', async (req, res) => {
   // Extrai os dados do corpo da requisição

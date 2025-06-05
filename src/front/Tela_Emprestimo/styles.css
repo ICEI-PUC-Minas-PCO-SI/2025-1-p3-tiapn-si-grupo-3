@@ -589,3 +589,135 @@ main > article > div.container > div.container2 > div.container4 > div.grupo2 > 
   margin-right: 20px;
 
 }
+
+main > article > div#container_index{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: transparent;
+  box-shadow: none;
+
+}
+
+main > article > div#container_index > div#links_pags > div.link_pag{
+
+  background-color: #F5F5F5;
+  padding: 10px 10px 0 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow:  3px 3px 3px 1px rgba(179, 179, 179, 0.847);
+}
+
+main > article > div#container_index > div#links_pags > div.link_pag:hover{
+
+  margin-left: 20px;
+}
+
+main > article > div#container_index > div#links_pags > div.link_pag > a{
+
+  display:flex;
+  text-decoration: none;
+  color:black;
+  
+}
+
+main > article > div#container_index > div#links_pags > div.link_pag > a > i{
+
+  color:#FDBE00
+}
+
+main > article > div#container_index > div#links_pags > div.link_pag > a > .divider {
+  width: 1px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0px 10px;
+}
+
+main > article > div#container_index > div#lista_emprestimo{
+
+  text-align: right;
+  background-color: #D9D9D9;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo1, main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo2{
+
+  padding-top: 5px;
+}
+
+main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo1 > div, main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo2 > div{
+
+  margin-bottom: 20px;
+}
+
+main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo1 > div > p.label, main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo2 > div > p.label{
+
+  margin:0;
+  padding:0;
+  font-weight: bold;
+}
+
+main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo1 > div > p.text, main > article > div#container_index > div#lista_emprestimo > div.emprestimo div#grupo2 > div > p.text{
+
+  font-size: 1.3em;
+  padding:0;
+  margin:0;
+  padding-top: 3px;
+}
+
+main > article > div#container_index > div#lista_emprestimo > div.emprestimo{
+
+  background-color: white;
+  padding: 10px 40px 20px 20px;
+  border-radius: 10px;
+  box-shadow: inset 2.7px 2.7px 3px -0.5px rgb(162, 162, 162);
+  width:35vw;
+ 
+  margin-bottom: 20px;
+  justify-content: space-between;
+  text-align: left;
+
+}
+
+main > article > div#container_index > div#lista_emprestimo > div.emprestimo > div#grupo2{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+main > article > div#container_index > div#lista_emprestimo > div.emprestimo > div#grupo2 > div{
+
+  margin-right: 20px;
+}
+
+main > article > a{
+
+   text-decoration: none;
+}
+
+main > article > a > button, main > article > div#container_index > div#lista_emprestimo > a{
+
+  text-decoration: none;
+}
+main > article > a > button, main > article > div#container_index > div#lista_emprestimo > a > button{
+
+  background-color: #FDBE00;
+  color:white;
+  border: none;
+  border-radius: 12px;
+  padding:0px 40px;
+  font-weight: bolder;
+  font-size: 1.2em;
+  display: inline;
+  box-shadow:  3px 3px 3px 1px rgba(179, 179, 179, 0.847);
+  height: 7vh;
+  margin-top: 32px;
+ 
+}
+
+main > article > button:hover, main > article > div#container_index > div#lista_emprestimo > a > button:hover{
+
+  background-color: #3B378C;
+}

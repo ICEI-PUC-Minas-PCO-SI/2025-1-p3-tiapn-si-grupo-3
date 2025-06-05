@@ -125,86 +125,37 @@
     <main>
       <article>
 
-        <h1>Gerar Novo Empréstimo</h1>
+        <h1>Lista de Empréstimo</h1>
 
         <div class="divider"></div>
 
         <div class="container">
 
-          <div class="container2">
+          <div id="filtragem">
+            
+            <div class="input-icons">
+
+              <i id="icon_search" class="material-icons">search</i>
+
+              <input type="text" name="nome" id="inputNome" placeholder="Nome" onkeyup="pesquisar()">
+            </div>
+
+            <select name="selectPeca" id="selectPeca" onchange="pesquisar()">
+
+            </select>
+
+            <select name="selectDepartamento" id="selectDepartamento" onchange="pesquisar()">
+              
+            </select>
+
+            <a href="index.html" style="color:black"><i class="material-icons">close</i></a>
+
+          </div>
+
+          <div class="divider"></div>
+
+          <div id="listaEmprestimos" class="container2">
         
-            <div class="container4">
-
-              <!--
-                <div id="grupo1">
-                    <p>Nome:</p>
-                    <input type="text" id="inputNome" placeholder="Insria o nome">
-                </div>
-              -->
-                <div class="grupo2">
-
-                    <div id="grupo2-sub1">
-                        <p>Codigo Funcionario:</p>
-                        <select name="selectCodFunc" id="selectFuncionario" >
-                            
-                            
-                        </select>
-                    </div>
-
-                    <div id="grupo2-sub2">
-                        <p>Codigo Da Ferramenta</p>
-                        <select name="selectCodFerr" id="selectFerramenta" >
-                            
-                        </select>
-                    </div>
-                    
-                </div>
-
-                <div class="grupo2">
-
-                    <div id="grupo2-sub1" class="corrigeEspc" style="margin-right: 70px;">
-                        <p>Quantida de Emprestimo</p>
-                        <input type="text" id="inputQuantidade" placeholder="Insria a quantidade">
-                    </div>
-
-                    <div id="grupo2-sub2">
-                        
-                        <p>Data para Devolução</p>
-
-                        <div class="input-icons">
-                            <i id="icon_date_range" class="material-icons">date_range</i>
-                            <input type="text" id="inputData" placeholder="AAAA-MM-DD" style="text-indent: 40px;">
-                        </div>   
-
-                    </div>                
-                </div>
-
-                <div class="grupo2" >
-
-                  <div id="grupo2-sub1" style="margin-right: 0px;">
-                    <p>Descrição</p>
-                    <input type="text" id="inputDescricao" placeholder="Insria a descricao">
-                  </div>
-                  
-                  <button onclick="criaEmprestimo()">Emprestar</button>
-                </div>
-
-            </div>
-
-            <div id="erro" class="container5">
-
-                <h1>Error: Funcionario bloqueado para o emprestimo</h1>
-
-                <p>Alguns possiveis motivos: Setor não tem autorização para emprestimo da ferramenta especifica, funcionario penalizado etc</p>
-
-                <div class="button-icons">
-
-                    <i id="icon_error_outline" class="material-icons">error_outline</i>
-
-                    <button>Emprestar mesmo assim</button>
-                </div>
-                
-            </div>
           </div>
           
         </div>
@@ -212,7 +163,7 @@
     </main>
   </div>
  
-  <script src="script3.js"></script>
+  <script src="script2.js"></script>
 </body>
 
 </html>

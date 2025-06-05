@@ -24,7 +24,7 @@
 
         <div class="navbar-left">
             <button class="menu-button">&#9776;</button>
-            <a href="./../Tela-Home/index.html">
+            <a href="./../Tela-Home/Index.html">
                 <img src="./../assets/Logo-Manejo_Laranja.png" alt="Logo Manejo" class="logo-img" />
             </a>
 
@@ -125,39 +125,48 @@
     <main>
       <article>
 
-        <h1>Lista de Empréstimo</h1>
+        <h1>Menu Rápido</h1>
+
+        <a href="Lista_Emprestimo.html"><button>Listar Emprestimos</button></a>
+        <a href="GeraEmprestimo.html"><button>Emprestimo de Material</button></a>
 
         <div class="divider"></div>
 
-        <div class="container">
+        <div class="container" id="container_index">
 
-          <div id="filtragem">
-            
-            <div class="input-icons">
+            <div id="links_pags">
 
-              <i id="icon_search" class="material-icons">search</i>
+                <div class="link_pag">
+                    <a href="#">
+                        <i class="material-icons">edit</i>
+                        <div class="divider"></div>
+                        <p>Editar Departamentos</p>
+                    </a>
+                </div>
 
-              <input type="text" name="nome" id="inputNome" placeholder="Nome" onkeyup="pesquisar()">
+                <div class="link_pag">
+                    <a href="GeraEmprestimo.html">
+                        <i class="material-icons">add</i>
+                        <div class="divider"></div>
+                        <p>Emprestimo de Material</p>
+                    </a>
+                </div>
+
+                <div class="link_pag">
+                    <a href="#">
+                        <i class="material-icons">block</i>
+                        <div class="divider"></div>
+                        <p>Bloquear Emprestimo</p>
+                    </a>
+                </div>
+                
             </div>
 
-            <select name="selectPeca" id="selectPeca" onchange="pesquisar()">
+            <div id="lista_emprestimo">
+               
 
-            </select>
-
-            <select name="selectDepartamento" id="selectDepartamento" onchange="pesquisar()">
-              
-            </select>
-
-            <i class="material-icons">close</i>
-
-          </div>
-
-          <div class="divider"></div>
-
-          <div id="listaEmprestimos" class="container2">
-        
-          </div>
-          
+                
+            </div>
         </div>
       </article>
     </main>
