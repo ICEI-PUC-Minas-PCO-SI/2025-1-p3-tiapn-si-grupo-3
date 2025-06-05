@@ -38,7 +38,7 @@ async function carregarLembretes() {
     const response = await fetch(`${API_URL}/Lembrete`);
     const lembretes = await response.json();
 
-
+    
     reminderList.innerHTML = "";
     if (lembretes.length === 0) {
       showEmptyReminderMessage();
@@ -74,11 +74,19 @@ async function addReminder(text) {
     }).then(response => console.log(response.status));
 
 
-
+   recarregarAPagina();
+   
   } catch (err) {
     console.error(err);
   }
 }
+
+function recarregarAPagina(){
+
+
+  window.location.reload();
+  console.log("eede")
+} 
 
 // Passo 3: Remove lembrete no backend e atualiza lista visual
 async function removerLembrete(id) {
