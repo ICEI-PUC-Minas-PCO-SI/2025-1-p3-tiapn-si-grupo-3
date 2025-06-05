@@ -73,9 +73,8 @@ const tabelas = [
 // Cria as rotas automaticamente
 tabelas.forEach(criarRotaParaTabela);
 EmprestimoFuncionario();
-<<<<<<< HEAD
+
 deletaEmprestimo();
-=======
 
 router.post('/Ferramenta', async (req, res) => {
   // Extrai os dados do corpo da requisição
@@ -155,6 +154,4 @@ router.delete('/Ferramenta/:id', async (req, res) => {
   }
 });
 
-
->>>>>>> main
 module.exports = router;
