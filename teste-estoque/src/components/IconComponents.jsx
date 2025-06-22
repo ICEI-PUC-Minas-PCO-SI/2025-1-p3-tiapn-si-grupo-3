@@ -1,18 +1,21 @@
+// frontend/src/components/IconComponents.js
 import {
   HomeIcon,
-  ShoppingCartIcon, // Para Empréstimos
-  UsersIcon,        // Para Funcionários
-  CalendarDaysIcon, // Para Agenda
-  WrenchIcon,   // Para Estoque
-  Cog6ToothIcon,    // Para Configuração
-  BuildingOfficeIcon, // Para Departamento
+  ShoppingCartIcon,
+  UsersIcon,
+  CalendarDaysIcon,
+  WrenchIcon,
+  Cog6ToothIcon,
+  BuildingOfficeIcon,
   MagnifyingGlassIcon,
   BellIcon,
   UserCircleIcon,
   PencilIcon,
   PlusIcon,
   TrashIcon,
-} from '@heroicons/react/24/solid'; // ou /24/solid se preferir
+  ChevronLeftIcon,  // Adicionado
+  ChevronRightIcon, // Adicionado
+} from '@heroicons/react/24/solid';
 
 export {
   HomeIcon,
@@ -28,4 +31,6 @@ export {
   PencilIcon,
   PlusIcon,
   TrashIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
 };

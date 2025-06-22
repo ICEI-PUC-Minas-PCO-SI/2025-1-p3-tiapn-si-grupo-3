@@ -21,7 +21,6 @@ function criarRotaParaTabela(nomeTabela) {
 router.get('/Ferramenta', async (req, res) => {
     console.log('Requisição GET /api/Ferramenta recebida!');
     try {
-        // MUDANÇA AQUI: 'Disponibilidade' para 'Quantidade'
         const [rows] = await db.query(`SELECT Codigo, Nome, Tipo, Quantidade, Localizacao FROM Ferramenta`);
         res.json(rows);
     } catch (err) {
@@ -50,12 +49,12 @@ router.post('/Ferramenta', async (req, res) => {
     }
 });
 
-// FAÇA A MESMA VERIFICAÇÃO E AJUSTE PARA router.put('/Ferramenta/:codigo', ...)
+
 router.put('/Ferramenta/:codigo', async (req, res) => {
     console.log(`Requisição PUT /api/Ferramenta/${req.params.codigo} recebida!`);
     const { codigo } = req.params; // Parâmetro de rota
-    // AQUI: A desestruturação do req.body em camelCase está correta.
-    const { nome, tipo, quantidade, localizacao } = req.body; // Dados do corpo da requisição
+   
+    const { nome, tipo, quantidade, localizacao } = req.body; 
 
     if (!nome || !tipo || quantidade === undefined || !localizacao) {
         return res.status(400).json({ error: 'Todos os campos (nome, tipo, quantidade, localizacao) são obrigatórios para a atualização da ferramenta.' });
@@ -100,6 +99,105 @@ router.get(`/EmprestimoFuncionario`, async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: `Erro ao buscar dados da tabela ` });
+    }
+});
+
+// ROTA PARA BUSCAR EMPRÉSTIMOS PARA A AGENDA
+router.get('/Emprestimos', async (req, res) => {
+  console.log('Requisição GET /api/Emprestimos recebida!');
+  try {
+       
+ const query = `
+            SELECT 
+                e.Codigo, 
+                e.Descricao, 
+                e.Data_Retirada, 
+                e.Data_Devolucao,
+                f.Nome as FuncionarioNome
+            FROM Emprestimo as e
+            LEFT JOIN Funcionario as f ON e.Operario_Funcionario_Codigo = f.Codigo
+        `;
+ const [rows] = await db.query(query);
+ res.json(rows);
+  } catch (err) {
+ console.error('Erro ao buscar empréstimos:', err);
+ res.status(500).json({ error: 'Erro ao buscar dados de empréstimos.' });
+  }
+});
+
+router.get('/Eventos', async (req, res) => {
+  console.log('Requisição GET /api/Eventos recebida!');
+  try {
+       
+ const query = `
+            SELECT 
+                ev.Codigo, 
+                ev.Titulo, 
+                ev.Data, 
+                f.Nome as AdminNome
+            FROM Evento as ev
+            LEFT JOIN Funcionario as f ON ev.Administrador_Funcionario_Codigo = f.Codigo
+        `;
+ const [rows] = await db.query(query);
+ res.json(rows);
+  } catch (err) {
+ console.error('Erro ao buscar eventos:', err);
+ res.status(500).json({ error: 'Erro ao buscar dados de eventos.' });
+  }
+});
+
+router.post('/Eventos', async (req, res) => {
+    console.log('Requisição POST /api/Eventos recebida!');
+    const {title, date} = req.body;
+     const adminCodigo = 14;
+
+    if (!title || !date) {
+        return res.status(400).json({ error: 'Os campos título e data são obrigatórios para o evento.' });
+    }
+    try {
+        const query = 'INSERT INTO Evento (Titulo, Data, Administrador_Funcionario_Codigo) VALUES (?, ?, ?)';
+        const [result] = await db.query(query, [title, date, adminCodigo]); 
+        res.status(201).json({ message: 'Evento adicionado com sucesso.', id: result.insertId });
+    } catch (err) {
+        console.error('Erro ao adicionar evento:', err);
+        res.status(500).json({ error: 'Erro ao adicionar evento.' });
+    }   
+});
+
+router.put('/Eventos/:codigo', async (req, res) => {
+    console.log(`Requisição PUT /api/Eventos/${req.params.codigo} recebida!`);
+    const { codigo } = req.params; 
+    const { title, date } = req.body; 
+
+    if (!title || !date) {
+        return res.status(400).json({ error: 'Campos título e data são obrigatórios para eventos.' });
+    }
+    try {
+        const query = 'UPDATE Evento SET Titulo = ?, Data = ? WHERE Codigo = ?';
+        const [result] = await db.query(query, [title, date, codigo]);
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: 'Evento não encontrado.' });
+        }
+        res.json({ message: 'Evento atualizado com sucesso.' });
+    } catch (err) {
+        console.error('Erro ao atualizar evento:', err);
+        res.status(500).json({ error: 'Erro ao atualizar evento.' });
+    }
+});
+
+router.delete('/Eventos/:codigo', async (req, res) => {
+    console.log(`Requisição DELETE /api/Eventos/${req.params.codigo} recebida!`);
+    const { codigo } = req.params;
+    try {
+        const query = 'DELETE FROM Evento WHERE Codigo = ?';
+        const [result] = await db.query(query, [codigo]);
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: 'Evento não encontrado.' });
+        }
+        res.json({ message: 'Evento excluído com sucesso.' });
+    } catch (err) {
+        console.error('Erro ao excluir evento:', err);
+        res.status(500).json({ error: 'Erro ao excluir evento.' });
     }
 });
 

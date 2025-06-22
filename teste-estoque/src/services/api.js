@@ -50,6 +50,56 @@ export const deleteFerramenta = async (codigo) => {
   }
 };
 
+export const getEmprestimos = async () => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/Emprestimos`);
+        return response.data;
+    } catch (error) {
+        console.error('Erro ao buscar empréstimos:', error);
+        throw error; // Propaga o erro para ser tratado no componente
+    }
+};
+
+export const getEventos = async () => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/Eventos`);
+        return response.data;
+    } catch (error) {
+        console.error('Erro ao eventos:', error);
+        throw error;
+    }
+};
+
+export const addEvento = async (eventoData) => {
+  try {
+    const response = await api.post('/Eventos', eventoData);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao adicionar evento:', error);
+    throw error;
+  }
+};
+
+export const updateEvento = async (codigo, eventoData) => {
+  try {
+    const response = await api.put(`/Eventos/${codigo}`, eventoData);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao atualizar evento:', error);
+    throw error;
+  }
+};
+
+export const deleteEvento = async (codigo) => {
+  try {
+    const response = await api.delete(`/Eventos/${codigo}`);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao deletar evento:', error);
+    throw error;
+  }
+};
+
 // Funções para outras tabelas (exemplo)
 export const getDepartamentos = async () => {
     try {
