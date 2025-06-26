@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { ChevronLeftIcon, ChevronRightIcon, PlusIcon } from "./IconComponents";
 
-const Calendar = ({ onAddEvent, events, onEventClick }) => {
+const Calendar = ({ onAddEvent, events, onEventClick, typeColorMap }) => {
 
   const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -122,6 +122,16 @@ const Calendar = ({ onAddEvent, events, onEventClick }) => {
         ))}
         {renderCalendarDays()}
       </div>
+       {typeColorMap && (
+        <div className="mt-6 flex items-center justify-center space-x-4 sm:space-x-6">
+          {Object.entries(typeColorMap).map(([name, colorClass]) => (
+            <div key={name} className="flex items-center space-x-2">
+              <div className={`h-3 w-3 rounded-full ${colorClass}`}></div>
+              <span className="text-sm text-gray-600">{name}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -115,12 +115,18 @@ router.get('/Eventos', async (req, res) => {
 // Rota POST /Eventos (simplificada)
 router.post('/Eventos', async (req, res) => {
     console.log('Requisição POST /api/Eventos recebida!');
-    const { title, date } = req.body;
-    const adminCodigo = 14; // Usando um ID fixo para o administrador
+    const { title, date, adminCodigo } = req.body;
+    
 
     if (!title || !date) {
         return res.status(400).json({ error: 'Os campos título e data são obrigatórios para o evento.' });
     }
+
+    if (!adminCodigo) {
+        return res.status(400).json({ error: 'ID do usuário administrador não identificado.' });
+    }
+
+
     try {
         const query = 'INSERT INTO Evento (Titulo, Data, Administrador_Funcionario_Codigo) VALUES (?, ?, ?)';
         const [result] = await db.query(query, [title, date, adminCodigo]); 

@@ -12,7 +12,7 @@ import {
 
 const typeColorMap = {
   Retirada: "bg-green-500",
-  Devolução: "bg-yellow-500",
+  Devolução: "bg-red-500",
   Evento: "bg-purple-500",
 };
 
@@ -105,7 +105,23 @@ const Agenda = () => {
         });
         alert("Evento atualizado com sucesso!");
       } else {
-        await addEvento({ title: eventData.title, date: eventData.date });
+        const userString = localStorage.getItem('user');
+        if (!userString) {
+          alert("Sessão inválida. Por favor, faça o login novamente para continuar.");
+          return;
+        }
+        const user = JSON.parse(userString);
+        const adminCodigo = user.id; 
+
+       
+        const dataToSend = {
+          title: eventData.title,
+          date: eventData.date,
+          adminCodigo: adminCodigo, 
+        };
+
+       
+        await addEvento(dataToSend);
         alert("Evento criado com sucesso!");
       }
       handleCloseModal();
@@ -150,6 +166,7 @@ const Agenda = () => {
           onAddEvent={handleOpenModalForCreate}
           events={events}
           onEventClick={handleEventClick}
+          typeColorMap={typeColorMap}
         />
       </main>
       <AddEventModal
