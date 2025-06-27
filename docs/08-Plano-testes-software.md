@@ -61,7 +61,7 @@ Por exemplo:
 | Critério de êxito | - Será exibido logo abaixo todos o empréstimo ou o emréstimo filtrado|
 | Responsável pela elaboração do caso de teste | Ingrid Yara Alves dos Santos.|
 
-| **Caso de teste**  | **CT-006 – Excluir Empréstimos**  |
+| **Caso de teste**  | **CT-007 – Excluir Empréstimos**  |
 |:---: |:---: |
 | Requisito associado | RF-009	O sistema deve permitir o usuário a excluir os empréstimos|
 | Objetivo do teste | Excluir empréstimos |
@@ -69,7 +69,7 @@ Por exemplo:
 | Critério de êxito | - O empréstimo deve sumir da tela
 | Responsável pela elaboração do caso de teste | Ingrid Yara Alves dos Santos.|
 
-| **Caso de teste**  | **CT-006 – Apagar funcionários**  |
+| **Caso de teste**  | **CT-008 – Apagar funcionários**  |
 |:---: |:---: |
 | Requisito associado |RF-013 A empresa deverá conseguir apagar funcionários. |
 | Objetivo do teste | Testando a função de apagar um funcionário da empresa. |
@@ -77,7 +77,7 @@ Por exemplo:
 | Critério de êxito | - Deleção do funcionário. |
 | Responsável pela elaboração do caso de teste | Gabriel Henrique Magri. |
 
-| **Caso de teste**  | **CT-007 – Criar/Editar funcionários**  |
+| **Caso de teste**  | **CT-009 – Criar/Editar funcionários**  |
 |:---: |:---: |
 | Requisito associado |RF-014	A empresa deverá conseguir editar o nome e o código do funcionário. |
 | Objetivo do teste | Verificar a criação e edição de funcionários. |
