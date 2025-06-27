@@ -31,17 +31,17 @@
 | **Caso de teste** 	| **CT-006 – Cria Emprestimo** 	|
 |:---:	|:---:	|
 | Requisito associado |RF-007 O sistema deve permitir o usuário a criar empréstimos. |
-| Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
+| Registro de evidência |  [Teste Criar Emprestimo](https://drive.google.com/file/d/1eI71YBjg_KqauepKeumhVcIWuLNU5Dd4/view?usp=sharing) |
 
 | **Caso de teste** 	| **CT-007 – Listar Emprestimos** 	|
 |:---:	|:---:	|
 | Requisito associado |RF-010 O sistema deve listar os empréstimos. |
-| Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
+| Registro de evidência |  [Teste Lista Emprestimo](https://drive.google.com/file/d/1rf-yT1g5gz_HCVWmaCariQFWpq5thsAP/view?usp=sharing) |
 
 | **Caso de teste** 	| **CT-008 – Deletar Emprestimo** 	|
 |:---:	|:---:	|
 | Requisito associado |RF-009 O sistema deve permitir o usuário a deletar empréstimos. |
-| Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
+| Registro de evidência |  [Teste_Apagar_Emprestimo](https://drive.google.com/file/d/1vBkOsOwAR-6pc7yHnXVdgUnJUTte-A35/view?usp=sharing)|
 
 ## Avaliação
 
