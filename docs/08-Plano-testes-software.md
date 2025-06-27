@@ -95,6 +95,14 @@ Por exemplo:
 | Critério de êxito | - Criação do funcionário. |
 | Responsável pela elaboração do caso de teste | Gabriel Henrique Magri. |
 
+| **Caso de teste**  | **CT-010 – Alterar senha em Configurações**  |
+|:---: |:---: |
+| Requisito associado |RF-003	A empresa deve conseguir recuperar seus dados de login.|
+| Objetivo do teste | Alterar senha do sistema. |
+| Passos | - No menu lateral vá até "Configurações" <br> - Preencha os campos com e-mail, senha atual e confirmações de nova senha. <br> - Clicar no "Salvar alterações" |
+| Critério de êxito | - Senha alterada com sucesso. |
+| Responsável pela elaboração do caso de teste | Luiz Henrique Oliveira Coelho. |
+
 ## Ferramentas de testes (opcional)
 
 Comente sobre as ferramentas de testes utilizadas.
