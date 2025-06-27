@@ -24,7 +24,7 @@ Para cada caso de teste definido no <a href="08-Plano-testes-software.md"> Plano
 | **Caso de teste** 	| **CT-003 – Criar Ferramenta** 	|
 |:---:	|:---:	|
 | Requisito associado | RF-005 A empresa deve conseguir realizar a adição de produtos (ferramentas) com código único que serão emprestados, assim como a quantidade específica e localização de cada objeto. |
-| Registro de evidência |  [Teste Criação Ferramenta]([https://drive.google.com/file/d/1RGV4Jmo5muY6fTLgNZ_A6I44CdYS4IPa/view?usp=sharing]) |
+| Registro de evidência |  [Teste Criação Ferramenta](https://drive.google.com/file/d/1RGV4Jmo5muY6fTLgNZ_A6I44CdYS4IPa/view?usp=sharing) |
 
 
 > **Links úteis**:
