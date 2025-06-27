@@ -18,18 +18,30 @@
 | Requisito associado | RF-005 A empresa deve conseguir realizar a adição de produtos (ferramentas) com código único que serão emprestados, assim como a quantidade específica e localização de cada objeto. |
 | Registro de evidência |  [Teste Criação Ferramenta](https://drive.google.com/file/d/1RGV4Jmo5muY6fTLgNZ_A6I44CdYS4IPa/view?usp=sharing) |
 
-
-
-| **Caso de teste** 	| **CT-006 – Apagar Funcionários** 	|
+| **Caso de teste** 	| **CT-004 – Apagar Funcionários** 	|
 |:---:	|:---:	|
 | Requisito associado |RF-013 A empresa deverá conseguir apagar funcionários. |
 | Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
 
-| **Caso de teste** 	| **CT-007 – Criar/Editar funcnionários** 	|
+| **Caso de teste** 	| **CT-005 – Criar/Editar funcnionários** 	|
 |:---:	|:---:	|
 | Requisito associado | RF-014 A empresa deverá conseguir editar o nome e o código do funcionário. |
 | Registro de evidência |  [Teste Criação Funcionário]([https://drive.google.com/file/d/1-Ibsfg-szzXgZ5Lhhxpgwhbt90aMl39S/view?usp=sharing](https://drive.google.com/file/d/1g67Y5F2SNOd9sMD-LwkzkXdjRbO-Cfgt/view?usp=sharing)) |
 
+| **Caso de teste** 	| **CT-006 – Cria Emprestimo** 	|
+|:---:	|:---:	|
+| Requisito associado |RF-007 O sistema deve permitir o usuário a criar empréstimos. |
+| Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
+
+| **Caso de teste** 	| **CT-007 – Listar Emprestimos** 	|
+|:---:	|:---:	|
+| Requisito associado |RF-010 O sistema deve listar os empréstimos. |
+| Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
+
+| **Caso de teste** 	| **CT-008 – Deletar Emprestimo** 	|
+|:---:	|:---:	|
+| Requisito associado |RF-009 O sistema deve permitir o usuário a deletar empréstimos. |
+| Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
 
 ## Avaliação
 
