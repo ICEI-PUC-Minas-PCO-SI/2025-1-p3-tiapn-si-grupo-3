@@ -64,9 +64,12 @@ function Forms(){
 
     let res
     
+    if(!quantidade.trim() || !dataEm.trim() || !descricao.trim()){
+      alert("Preencha todos os campos")
+      return
+    }
     try{
 
-      
       setQuantidade('')
       setData('')
       setDescricao('')
@@ -135,7 +138,7 @@ function Forms(){
                   <input type="text" 
                   value={quantidade} 
                   onChange={(event) => setQuantidade(event.target.value)}
-                  id="inputQuantidade" placeholder="Insria a quantidade" className='teste'></input>
+                  id="inputQuantidade" placeholder="Insria a quantidade" className='teste' required></input>
 
                 </div>
 
@@ -145,7 +148,7 @@ function Forms(){
 
                   <div className="input-icons">
                     <i><BsCalendar3/></i>
-                    <input type="text" id="inputData" placeholder="AAAA-MM-DD" value={dataEm} onChange={(event) => setData(event.target.value)} style={{textIndent: 40 + 'px'}}/>
+                    <input type="text" id="inputData" placeholder="AAAA-MM-DD" value={dataEm} onChange={(event) => setData(event.target.value)} style={{textIndent: 40 + 'px'}} required/>
                   </div>   
 
                 </div>                
@@ -156,12 +159,12 @@ function Forms(){
                 <div id="grupo2-sub1" style={{marginRight: 60 + 'px'}}>
 
                   <p>Descrição</p>
-                  <input className='inputDescricao' type="text" value={descricao}
-                  onChange={(event) => setDescricao(event.target.value)} id="inputDescricao" placeholder="Insria a descricao"/>
+                  <input required className='inputDescricao' type="text" value={descricao}
+                  onChange={(event) => setDescricao(event.target.value)} id="inputDescricao" placeholder="Insria a descricao" />
 
                 </div>
                   
-                <button className="btn-forms" onClick={()=> criaEmprestimo()}>Emprestar</button>
+                <button type="submit" className="btn-forms" onClick={()=> criaEmprestimo()}>Emprestar</button>
               </div>
             </div>
 

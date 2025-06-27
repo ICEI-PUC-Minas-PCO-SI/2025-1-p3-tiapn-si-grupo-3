@@ -37,7 +37,8 @@ export default function ReminderList() {
     let res
 
     try{
-
+      
+      setInput('');
       res = await postLembrete( processedData);
 
     }catch(er){
@@ -46,8 +47,7 @@ export default function ReminderList() {
     }
 
     if (res.ok) {
-
-      setInput('');
+      
       const updated = await res.json();
       setlembretes((prev) => [...prev, updated]);
     }

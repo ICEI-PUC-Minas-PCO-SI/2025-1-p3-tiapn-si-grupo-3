@@ -210,7 +210,9 @@ export const deleteEmprestimo = async (codigo) => {
 
 export const postEmprestimo = async (req, res) => {
   try {
+    alert("Empréstimo criado com sucesso")
     const response = await api.post(`/Emprestimo`, req);
+    
     return response.data;
   } catch (erro) {
     console.log(erro);
