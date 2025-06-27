@@ -47,14 +47,6 @@ Por exemplo:
 | Responsável pela elaboração do caso de teste | Iago Gonçalves Moysés. |
 
 
-| **Caso de teste**  | **CT-003 – Criar Ferramentas**  |
-|:---: |:---: |
- | Requisito associado | RF-005 - A empresa deve conseguir realizar a adição de produtos (ferramentas) com código único que serão emprestados, assim como a quantidade específica e localização de cada objeto. |
-| Objetivo do teste | Verificar se a empresa consegue realizar o cadastro de ferramentas. |
-| Passos |  Acessar a página Estoque pelo Menu Lateral <br> - Identificar o botão "Adicionar Ferramenta' <br> - Clicar em "Adicionar Ferramenta" <br> - Preencher os campo com as informações desejadas <br> - Pressionar o botão "Salvar" ou "Enter" |
-| Critério de êxito | - Ferramenta cadastrada com sucesso. |
-| Responsável pela elaboração do caso de teste | Iago Gonçalves Moysés. |
-
 ## Ferramentas de testes (opcional)
 
 Comente sobre as ferramentas de testes utilizadas.
