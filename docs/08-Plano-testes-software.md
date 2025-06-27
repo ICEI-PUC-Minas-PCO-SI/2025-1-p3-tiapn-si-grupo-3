@@ -29,7 +29,7 @@ Por exemplo:
 | Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
 
 
-| **Caso de teste**  | **CT-001 – Criar Lembretes**  |
+| **Caso de teste**  | **CT-003 – Criar Lembretes**  |
 |:---: |:---: |
 | Requisito associado | RF-018	O sistema deverá permitir a criação de lembretes de tarefas a serem feitas. |
 | Objetivo do teste | Verificar se o usuário consegue cadastrar um lembrete na aplicação. |
@@ -37,13 +37,21 @@ Por exemplo:
 | Critério de êxito | - Lembrete gerado com sucesso. |
 | Responsável pela elaboração do caso de teste | João Felipe da Silva Prado. |
 
-| **Caso de teste**  | **CT-002 – Criar Conta**  |
+| **Caso de teste**  | **CT-004 – Criar Conta**  |
 |:---: |:---: |
 | Requisito associado | RF-001	A empresa deve criar um usuário e senha. |
 | Objetivo do teste | Verificar se o usuário consegue cadastrar a conta. |
 | Passos | - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome completo, celular, CPF, senha, cargo, data de nascimento, confirmação de senha, rua, numero e cidade) <br> - Clicar em "Criar Conta" |
 | Critério de êxito | - Usuário será direcionado para a tela de login para logar na conta criada. |
 | Responsável pela elaboração do caso de teste | João Gabriel Soares Da Silva Franco. |
+
+| **Caso de teste**  | **CT-005 – Criar Empréstimo**  |
+|:---: |:---: |
+| Requisito associado | RF-010	O sistema deve permitir o usuário a cadastrar um empréstimo |
+| Objetivo do teste | Criar um empréstimo |
+| Passos | - É necessário preencher todos os campos do forms, quantidade de ferramentas, a data de devolução da ferramenta e uma breve descrição, além disso é necessário selecionar o código do funcionário e código da ferramenta 
+| Critério de êxito | - É necessário acessar a tela Lista Empréstimos para verficar se o novo empréstimo foi criado|
+| Responsável pela elaboração do caso de teste | Ingrid Yara Alves dos Santos.|
 
 ## Ferramentas de testes (opcional)
 
