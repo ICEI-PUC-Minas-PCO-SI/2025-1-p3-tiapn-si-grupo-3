@@ -26,6 +26,16 @@ Para cada caso de teste definido no <a href="08-Plano-testes-software.md"> Plano
 | Requisito associado | RF-001 A empresa deve criar um usuário e senha. |
 | Registro de evidência |  [Teste Criação Conta](https://drive.google.com/file/d/1-Ibsfg-szzXgZ5Lhhxpgwhbt90aMl39S/view?usp=sharing) |
 
+| **Caso de teste** 	| **CT-006 – Apagar Funcionários** 	|
+|:---:	|:---:	|
+| Requisito associado |RF-013 A empresa deverá conseguir apagar funcionários. |
+| Registro de evidência |  [Teste Apagar Funcionário]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1bVl2F0Z_Csntm48nZICuOLgd5GqEO2B0/view?usp=sharing)) |
+
+| **Caso de teste** 	| **CT-007 – Criar/Editar funcnionários** 	|
+|:---:	|:---:	|
+| Requisito associado | RF-014 A empresa deverá conseguir editar o nome e o código do funcionário. |
+| Registro de evidência |  [Teste Criação Funcionário]([https://drive.google.com/file/d/1-Ibsfg-szzXgZ5Lhhxpgwhbt90aMl39S/view?usp=sharing](https://drive.google.com/file/d/1g67Y5F2SNOd9sMD-LwkzkXdjRbO-Cfgt/view?usp=sharing)) |
+
 > **Links úteis**:
 > - [Screencast: entenda o que é e como gravar vídeos com ele](https://rockcontent.com/br/blog/screencast/) 
 
