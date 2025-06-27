@@ -13,6 +13,13 @@
 | Requisito associado | RF-001 A empresa deve criar um usuário e senha. |
 | Registro de evidência |  [Teste Criação Conta](https://drive.google.com/file/d/1-Ibsfg-szzXgZ5Lhhxpgwhbt90aMl39S/view?usp=sharing) |
 
+| **Caso de teste** 	| **CT-003 – Criar Ferramenta** 	|
+|:---:	|:---:	|
+| Requisito associado | RF-005 A empresa deve conseguir realizar a adição de produtos (ferramentas) com código único que serão emprestados, assim como a quantidade específica e localização de cada objeto. |
+| Registro de evidência |  [Teste Criação Ferramenta](https://drive.google.com/file/d/1RGV4Jmo5muY6fTLgNZ_A6I44CdYS4IPa/view?usp=sharing) |
+
+
+
 | **Caso de teste** 	| **CT-006 – Apagar Funcionários** 	|
 |:---:	|:---:	|
 | Requisito associado |RF-013 A empresa deverá conseguir apagar funcionários. |
