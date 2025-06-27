@@ -64,22 +64,23 @@ function Forms(){
 
     let res
     
-      try{
-    
-        res = await postEmprestimo(data);
-    
-      }catch(er){
-    
-        console.log(er);
-      }
-    
-      if (res.ok) {
-    
-        //setInput('');
-        const updated = await res.json();
-        setEmprestimos((prev) => [...prev, updated]);
-      }
+    try{
 
+      
+      setQuantidade('')
+      setData('')
+      setDescricao('')
+
+      res = await postEmprestimo(data);
+
+      const updated = await res.json();
+      
+      setEmprestimos((prev) => [...prev, updated]);
+    
+    }catch(er){
+    
+      console.log(er);
+    }
 }
 
   return (
