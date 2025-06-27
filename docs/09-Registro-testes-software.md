@@ -21,6 +21,11 @@ Para cada caso de teste definido no <a href="08-Plano-testes-software.md"> Plano
 | Requisito associado | RF-018 O sistema deverá permitir a criação de lembretes de tarefas a serem feitas. |
 | Registro de evidência |  [Teste Criação Lembrete](https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing) |
 
+| **Caso de teste** 	| **CT-003 – Criar Ferramenta** 	|
+|:---:	|:---:	|
+| Requisito associado | RF-005 A empresa deve conseguir realizar a adição de produtos (ferramentas) com código único que serão emprestados, assim como a quantidade específica e localização de cada objeto. |
+| Registro de evidência |  [Teste Criação Ferramenta]([https://drive.google.com/file/d/1OSIfO9uy3BSxYGjahiTFpTFONgi1Ev-U/view?usp=sharing](https://drive.google.com/file/d/1RGV4Jmo5muY6fTLgNZ_A6I44CdYS4IPa/view?usp=sharing)) |
+
 
 > **Links úteis**:
 > - [Screencast: entenda o que é e como gravar vídeos com ele](https://rockcontent.com/br/blog/screencast/) 
