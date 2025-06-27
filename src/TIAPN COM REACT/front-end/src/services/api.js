@@ -8,11 +8,14 @@ const api = axios.create({
 });
 
 export const updateConfig = async (processedData) => {
-  console.log(processedData);
+
   try {
-    const response = await api.put(`/Configuracao/:${Email}`, processedData);
+
+    const response = await api.put(`/Configuracao`, processedData);
     return response.data;
+
   } catch (error) {
+
     console.log("Erro ao atualizar senha:", error);
   }
 };
@@ -26,7 +29,6 @@ export const getFerramentas = async () => {
     console.error("Erro ao buscar ferramentas:", error);
     throw error;
   }
-  rl;
 };
 
 export const addFerramenta = async (ferramentaData) => {

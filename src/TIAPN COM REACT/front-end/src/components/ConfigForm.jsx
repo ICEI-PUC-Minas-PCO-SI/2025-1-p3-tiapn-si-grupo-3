@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import updateConfig from "./../services/api";
+import {updateConfig} from "./../services/api.js";
 
 function ConfigForm() {
   const [formData, setFormData] = useState({

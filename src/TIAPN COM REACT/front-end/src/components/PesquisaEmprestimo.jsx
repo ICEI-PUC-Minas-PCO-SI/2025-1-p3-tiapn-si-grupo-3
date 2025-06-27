@@ -84,7 +84,6 @@ function PesquisaEmprestimo(){
         const newEmprestimo = dados.filter(teste => dados.Codigo != id)
 
         setDados(newEmprestimo)
-
     }
 
     return (

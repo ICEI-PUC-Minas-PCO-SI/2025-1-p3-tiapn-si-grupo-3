@@ -374,13 +374,16 @@ tabelas.forEach(criarRotaParaTabela);
 
 //Rotas Config
 
-router.put("/Configuracao/:Email", async (req, res) => {
-  //const { currentUsername, newPassword } = req.body;
+router.put("/Configuracao", async (req, res) => {
+  
+
   console.log(req.body);
+  let email = req.body.Email
+  let senha = req.body.Senha
 
   try {
     const query = "UPDATE Administrador SET Senha = ? WHERE Email = ?";
-    const [result] = await db.query(query, [newPassword, currentUsername]);
+    const [result] = await db.query(query, [senha, email]);
 
     if (result.affectedRows === 0) {
       return res.status(404).json({ error: "Evento não encontrado." });
