@@ -53,7 +53,7 @@ Por exemplo:
 | Critério de êxito | - É necessário acessar a tela Lista Empréstimos para verficar se o novo empréstimo foi criado|
 | Responsável pela elaboração do caso de teste | Ingrid Yara Alves dos Santos.|
 
-| **Caso de teste**  | **CT-006 – Apagar funcnionários**  |
+| **Caso de teste**  | **CT-006 – Apagar funcionários**  |
 |:---: |:---: |
 | Requisito associado |RF-013 A empresa deverá conseguir apagar funcionários. |
 | Objetivo do teste | Testando a função de apagar um funcionário da empresa. |
@@ -61,7 +61,7 @@ Por exemplo:
 | Critério de êxito | - Deleção do funcionário. |
 | Responsável pela elaboração do caso de teste | Gabriel Henrique Magri. |
 
-| **Caso de teste**  | **CT-007 – Criar/Editar funcnionários**  |
+| **Caso de teste**  | **CT-007 – Criar/Editar funcionários**  |
 |:---: |:---: |
 | Requisito associado |RF-014	A empresa deverá conseguir editar o nome e o código do funcionário. |
 | Objetivo do teste | Verificar a criação e edição de funcionários. |
