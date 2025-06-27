@@ -53,7 +53,6 @@ Para iniciar, o usuário deve clonar o repositório e instalar as dependências 
 - Com tudo instalado e configurado, o servidor pode ser iniciado com o comando node index.js dentro da pasta back. Isso ativará a API na porta 3000, disponível localmente em http://localhost:3000.
 - O front-end pode ser iniciado na pasta front com o comando npm run dev, e ficará acessível através do navegador no endereço http://localhost:5173.
 
-- Link da Hospedagem ( https://adota-pet.herokuapp.com/src/index.html).
 
 #### 🚀 Credenciais de Teste
  - Ao rodar o projeto pela primeira vez, é conveniente acessar a tela de login e utilizar as seguintes credenciais de teste:
