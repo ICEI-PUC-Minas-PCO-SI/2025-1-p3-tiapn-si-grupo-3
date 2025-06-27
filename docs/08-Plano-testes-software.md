@@ -47,10 +47,26 @@ Por exemplo:
 
 | **Caso de teste**  | **CT-005 – Criar Empréstimo**  |
 |:---: |:---: |
-| Requisito associado | RF-010	O sistema deve permitir o usuário a cadastrar um empréstimo |
+| Requisito associado | RF-007	O sistema deve permitir o usuário a cadastrar um empréstimo |
 | Objetivo do teste | Criar um empréstimo |
-| Passos | - É necessário preencher todos os campos do forms, quantidade de ferramentas, a data de devolução da ferramenta e uma breve descrição, além disso é necessário selecionar o código do funcionário e código da ferramenta 
+| Passos | - É necessário preencher todos os campos do forms, quantidade de ferramentas, a data de devolução da ferramenta e uma breve descrição, além disso é necessário selecionar o código do funcionário e código da ferramenta |
 | Critério de êxito | - É necessário acessar a tela Lista Empréstimos para verficar se o novo empréstimo foi criado|
+| Responsável pela elaboração do caso de teste | Ingrid Yara Alves dos Santos.|
+
+| **Caso de teste**  | **CT-006 – Listar Empréstimos**  |
+|:---: |:---: |
+| Requisito associado | RF-010	O sistema deve listar todos os empréstimos|
+| Objetivo do teste | Listar empréstimos |
+| Passos | - É necessário apenas abrir a tela que será exibido todos os empréstimos atuais, se o usuário decidir filtrar estes é necessário preencher o campo nome, com o nome de um funcionário, o sistema irá mostrar todos os empréstimos relacionados com esse funcionário, ou o usuário pode selecionar o código de um funcionário ou de uma ferramenta, o sistema irá mostrar da mesma forma todos os empréstimos relacionados a ambos.
+| Critério de êxito | - Será exibido logo abaixo todos o empréstimo ou o emréstimo filtrado|
+| Responsável pela elaboração do caso de teste | Ingrid Yara Alves dos Santos.|
+
+| **Caso de teste**  | **CT-006 – Excluir Empréstimos**  |
+|:---: |:---: |
+| Requisito associado | RF-009	O sistema deve permitir o usuário a excluir os empréstimos|
+| Objetivo do teste | Excluir empréstimos |
+| Passos | - É necessário apenas clicar no botão "devolver"|
+| Critério de êxito | - O empréstimo deve sumir da tela
 | Responsável pela elaboração do caso de teste | Ingrid Yara Alves dos Santos.|
 
 | **Caso de teste**  | **CT-006 – Apagar funcionários**  |
