@@ -120,12 +120,12 @@ Legenda:
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Gabriel H.     | Tela funcionários em REACT e video final do projeto | 13/06/2025    | 21/06/2025 |   ✔️     |     |
+| Gabriel H.     | Tela funcionários em REACT e video final do projeto | 13/06/2025    | 26/06/2025 |   ✔️     |     |
 | Ingrid Y.       | Tela empréstimos em REACT e slides   |   13/06/2025   | 21/06/2025 |   ✔️      |                 |
-| João F.      | Tela início em REACT e completar os feedbacks do relatório e do repositório  |     | 21/06/2025 |   ✔️      |             |
-| Iago M.        |  Telas ferramentas, agenda e assinatura em REACT  |        13/06/2025   | 21/06/2025 |    ✔️    |     |         
-| João G.        | Tela login e cadastro em REACT e hospedagem do site  |   13/06/2025       | 21/06/2025  |    ✔️    |     |
-| Luiz H.       | Telas departamento e configurações em REACT e hospedagem do site  |    | 21/06/2025 |    ✔️    |     |
+| João F.      | Tela início em REACT e completar os feedbacks do relatório e do repositório  |  13/06/2025   | 26/06/2025 |   ✔️      |             |
+| Iago M.        |  Telas ferramentas, agenda e assinatura em REACT  |        13/06/2025   | 26/06/2025 |    ✔️    |     |         
+| João G.        | Tela login e cadastro em REACT e hospedagem do site  |   13/06/2025       | 26/06/2025  |    ✔️    |     |
+| Luiz H.       | Telas departamento e configurações em REACT e hospedagem do site  |  13/06/2025  | 26/06/2025 |    ✔️    |     |
 
 ### Processo
 
